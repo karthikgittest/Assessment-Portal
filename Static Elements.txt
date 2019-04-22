@@ -1,0 +1,17 @@
+Start Survey
+//button[@class='mat-raised-button mat-primary']
+
+Next Group
+//button[@class='mat-raised-button mat-primary ng-star-inserted']
+
+Next
+//button[@class='mat-raised-button mat-primary']
+
+Review
+//assess-survey-next-step-button
+
+
+Submit Survey
+//button[@class='mat-raised-button mat-primary']
+
+
