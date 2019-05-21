@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190415 18:17:52.726" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
-<suite source="D:\Assesment Portal\Tests\firefox.robot" id="s1" name="Firefox">
+<robot generated="20190508 14:03:48.195" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="D:\Assesment_Portal\Tests\firefox.robot" id="s1" name="Firefox">
 <test id="s1-t1" name="01_Launch Assessment Portal">
 <kw name="Set Environment Variable" library="OperatingSystem">
 <doc>Sets an environment variable to a specified value.</doc>
@@ -8,8 +8,8 @@
 <arg>webdriver.firefox.driver</arg>
 <arg>D:\MyStuff\Selenium\geckodriver.exe</arg>
 </arguments>
-<msg timestamp="20190415 18:17:53.370" level="INFO">Environment variable 'webdriver.firefox.driver' set to value 'D:MyStuffSeleniumgeckodriver.exe'.</msg>
-<status status="PASS" endtime="20190415 18:17:53.370" starttime="20190415 18:17:53.370"></status>
+<msg timestamp="20190508 14:03:51.688" level="INFO">Environment variable 'webdriver.firefox.driver' set to value 'D:MyStuffSeleniumgeckodriver.exe'.</msg>
+<status status="PASS" endtime="20190508 14:03:51.688" starttime="20190508 14:03:51.687"></status>
 </kw>
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -18,20 +18,20 @@
 <arg>firefox</arg>
 <arg>ff_profile_dir=None</arg>
 </arguments>
-<msg timestamp="20190415 18:17:53.370" level="INFO">Opening browser 'firefox' to base url 'https://assessments-uat.ccl.org'.</msg>
+<msg timestamp="20190508 14:03:51.690" level="INFO">Opening browser 'firefox' to base url 'https://assessments-uat.ccl.org'.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190415 18:19:13.035" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="PASS" endtime="20190415 18:19:13.035" starttime="20190415 18:19:13.034"></status>
+<msg timestamp="20190508 14:05:30.031" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20190508 14:05:30.032" starttime="20190508 14:05:30.031"></status>
 </kw>
-<msg timestamp="20190415 18:19:13.040" level="FAIL">WebDriverException: Message: newSession
+<msg timestamp="20190508 14:05:30.238" level="FAIL">WebDriverException: Message: newSession
 </msg>
-<status status="FAIL" endtime="20190415 18:19:13.040" starttime="20190415 18:17:53.370"></status>
+<status status="FAIL" endtime="20190508 14:05:30.238" starttime="20190508 14:03:51.690"></status>
 </kw>
-<status status="FAIL" endtime="20190415 18:19:13.045" critical="yes" starttime="20190415 18:17:53.370">WebDriverException: Message: newSession
+<status status="FAIL" endtime="20190508 14:05:30.246" critical="yes" starttime="20190508 14:03:51.686">WebDriverException: Message: newSession
 </status>
 </test>
-<status status="FAIL" endtime="20190415 18:19:13.048" starttime="20190415 18:17:52.736"></status>
+<status status="FAIL" endtime="20190508 14:05:30.253" starttime="20190508 14:03:48.203"></status>
 </suite>
 <statistics>
 <total>
@@ -45,7 +45,7 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190415 18:17:53.200" level="ERROR">Error in file 'D:\Assesment Portal\Tests\firefox.robot': Importing test library 'robot.libraries.Dialogs' failed: ImportError: DLL load failed: %1 is not a valid Win32 application.
+<msg timestamp="20190508 14:03:50.858" level="ERROR">Error in file 'D:\Assesment_Portal\Tests\firefox.robot': Importing test library 'robot.libraries.Dialogs' failed: ImportError: DLL load failed: %1 is not a valid Win32 application.
 Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\robot\libraries\Dialogs.py", line 39, in &lt;module&gt;
     from .dialogs_py import MessageDialog, PassFailDialog, InputDialog, SelectionDialog
