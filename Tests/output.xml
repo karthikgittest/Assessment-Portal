@@ -1,51 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190508 14:03:48.195" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
-<suite source="D:\Assesment_Portal\Tests\firefox.robot" id="s1" name="Firefox">
+<robot generated="20190715 17:47:51.231" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="D:\Assessment-Portal\Tests\Assessments_Text_Compare_wpb5.robot" id="s1" name="Assessments Text Compare wpb5">
 <test id="s1-t1" name="01_Launch Assessment Portal">
 <kw name="Set Environment Variable" library="OperatingSystem">
 <doc>Sets an environment variable to a specified value.</doc>
 <arguments>
-<arg>webdriver.firefox.driver</arg>
-<arg>D:\MyStuff\Selenium\geckodriver.exe</arg>
+<arg>webdriver.chrome.driver</arg>
+<arg>D:\MyStuff\Selenium\chromedriver.exe</arg>
 </arguments>
-<msg timestamp="20190508 14:03:51.688" level="INFO">Environment variable 'webdriver.firefox.driver' set to value 'D:MyStuffSeleniumgeckodriver.exe'.</msg>
-<status status="PASS" endtime="20190508 14:03:51.688" starttime="20190508 14:03:51.687"></status>
+<msg timestamp="20190715 17:47:52.793" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'D:MyStuffSeleniumchromedriver.exe'.</msg>
+<status status="PASS" endtime="20190715 17:47:52.794" starttime="20190715 17:47:52.793"></status>
 </kw>
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>https://assessments-uat.ccl.org</arg>
-<arg>firefox</arg>
-<arg>ff_profile_dir=None</arg>
+<arg>chrome</arg>
 </arguments>
-<msg timestamp="20190508 14:03:51.690" level="INFO">Opening browser 'firefox' to base url 'https://assessments-uat.ccl.org'.</msg>
+<msg timestamp="20190715 17:47:52.796" level="INFO">Opening browser 'chrome' to base url 'https://assessments-uat.ccl.org'.</msg>
+<status status="PASS" endtime="20190715 17:49:23.583" starttime="20190715 17:47:52.795"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20190715 17:49:23.588" starttime="20190715 17:49:23.584"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190715 17:49:24.880" starttime="20190715 17:49:23.589"></status>
+</kw>
+<status status="PASS" endtime="20190715 17:49:24.881" critical="yes" starttime="20190715 17:47:52.790"></status>
+</test>
+<test id="s1-t2" name="02_Login to Assessment Portal">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//input[@type='email']</arg>
+<arg>timeout=30</arg>
+<arg>error=User Name Input field not found</arg>
+</arguments>
+<status status="PASS" endtime="20190715 17:49:27.176" starttime="20190715 17:49:24.887"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@type='email']</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190715 17:49:27.177" level="INFO">Typing text 'karthik@banerasoft.biz' into text field 'xpath=//input[@type='email']'.</msg>
+<status status="PASS" endtime="20190715 17:49:28.721" starttime="20190715 17:49:27.177"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@type='password']</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190715 17:49:28.722" level="INFO">Typing text 'I@s12345' into text field 'xpath=//input[@type='password']'.</msg>
+<status status="PASS" endtime="20190715 17:49:29.177" starttime="20190715 17:49:28.722"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),'Log In')]</arg>
+</arguments>
+<msg timestamp="20190715 17:49:29.178" level="INFO">Clicking element 'xpath=//span[contains(text(),'Log In')]'.</msg>
+<status status="PASS" endtime="20190715 17:49:30.459" starttime="20190715 17:49:29.178"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Assessments - CCL</arg>
+</arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190508 14:05:30.031" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="PASS" endtime="20190508 14:05:30.032" starttime="20190508 14:05:30.031"></status>
+<msg timestamp="20190715 17:49:31.318" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190715 17:49:31.319" starttime="20190715 17:49:30.491"></status>
 </kw>
-<msg timestamp="20190508 14:05:30.238" level="FAIL">WebDriverException: Message: newSession
+<msg timestamp="20190715 17:49:31.394" level="FAIL">Title should have been 'Assessments - CCL' but was 'Center for Creative Leadership'.</msg>
+<status status="FAIL" endtime="20190715 17:49:31.394" starttime="20190715 17:49:30.461"></status>
+</kw>
+<status status="FAIL" endtime="20190715 17:49:31.395" critical="yes" starttime="20190715 17:49:24.886">Title should have been 'Assessments - CCL' but was 'Center for Creative Leadership'.</status>
+</test>
+<test id="s1-t3" name="03_Compare_form_items">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//span[contains(text(),'Self')])[3]</arg>
+<arg>timeout=30</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190715 17:49:40.439" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
 </msg>
-<status status="FAIL" endtime="20190508 14:05:30.238" starttime="20190508 14:03:51.690"></status>
+<status status="FAIL" endtime="20190715 17:49:40.440" starttime="20190715 17:49:40.247"></status>
 </kw>
-<status status="FAIL" endtime="20190508 14:05:30.246" critical="yes" starttime="20190508 14:03:51.686">WebDriverException: Message: newSession
+<msg timestamp="20190715 17:49:40.440" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<msg timestamp="20190715 17:49:40.589" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<status status="FAIL" endtime="20190715 17:49:40.590" starttime="20190715 17:49:31.400"></status>
+</kw>
+<status status="FAIL" endtime="20190715 17:49:40.591" critical="yes" starttime="20190715 17:49:31.398">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
 </status>
 </test>
-<status status="FAIL" endtime="20190508 14:05:30.253" starttime="20190508 14:03:48.203"></status>
+<status status="FAIL" endtime="20190715 17:49:40.597" starttime="20190715 17:47:51.235"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="2" pass="1">Critical Tests</stat>
+<stat fail="2" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Firefox" pass="0">Firefox</stat>
+<stat fail="2" id="s1" name="Assessments Text Compare wpb5" pass="1">Assessments Text Compare wpb5</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190508 14:03:50.858" level="ERROR">Error in file 'D:\Assesment_Portal\Tests\firefox.robot': Importing test library 'robot.libraries.Dialogs' failed: ImportError: DLL load failed: %1 is not a valid Win32 application.
+<msg timestamp="20190715 17:47:52.080" level="ERROR">Error in file 'D:\Assessment-Portal\Tests\Assessments_Text_Compare_wpb5.robot': Importing test library 'robot.libraries.Dialogs' failed: ImportError: DLL load failed: %1 is not a valid Win32 application.
 Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\robot\libraries\Dialogs.py", line 39, in &lt;module&gt;
     from .dialogs_py import MessageDialog, PassFailDialog, InputDialog, SelectionDialog
@@ -69,5 +156,10 @@ PYTHONPATH:
   C:\Python27\lib\site-packages\win32\lib
   C:\Python27\lib\site-packages\Pythonwin
   C:\Python27\lib\site-packages\wx-3.0-msw</msg>
+<msg timestamp="20190715 17:49:40.440" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
 </errors>
 </robot>
