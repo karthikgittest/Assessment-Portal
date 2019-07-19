@@ -19,7 +19,7 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
+- script: pip install robotframework robotframework-selenium2library && npm install chromedriver
   displayName: 'Install dependencies'
 
 - powershell: robot --pythonpath . Tests/headless.robot
