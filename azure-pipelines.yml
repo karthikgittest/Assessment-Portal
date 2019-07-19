@@ -22,4 +22,4 @@ steps:
 - script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . Test/headless.robot
+- powershell: robot --pythonpath . Tests/headless.robot
