@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'vs2017-win2009'
+  vmImage: 'vs2017-win2016'
 strategy:
   matrix:
     Python27:
@@ -22,4 +22,4 @@ steps:
 - script: pip install robotframework robotframework-selenium2library && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . Tests/headless.robot
+- powershell: robot --pythonpath . Tests/01_Assessments.robot
