@@ -28,5 +28,5 @@ steps:
 - task: PublishTestResults@1
   inputs:
    testResultsFiles: outputxunit.xml
-   searchFolder:'D:\a\1\s\'
-   condition:succeededOrFailed()
+   
+
