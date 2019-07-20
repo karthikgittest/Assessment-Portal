@@ -16,10 +16,18 @@ strategy:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '$(python.version)'
+   versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
 - script: pip install robotframework robotframework-selenium2library && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . Tests/headless.robot
+- powershell: robot --pythonpath . -x outputxunit.xml Tests/headless.robot
+  displayName: 'Run Robot Tests'
+
+- task: PublishTestResults@1
+  inputs:
+   testResultsFiles: outputxunit.xml
+    searchFolder: 'D:\a\1\s\'
+    condition: succeededOrFailed()
+    displayName: 'Publish Test Results outputxunit.xml'
