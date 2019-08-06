@@ -22,13 +22,13 @@ steps:
 - script: pip install robotframework robotframework-selenium2library && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . -x outputxunit.xml Tests/01_Assessments.robot
+- powershell: robot --pythonpath . -x outputxunit.xml Tests/headless.robot
   displayName: 'Run Robot Tests'
 
 - task: PublishTestResults@1
   inputs:
    testResultsFiles: outputxunit.xml
-   searchFolder: 'D:\a\1\s\'
+   searchFolder: 'C:\a\1\s\'
    condition: succeededOrFailed()
    displayName: 'Publish Test Results outputxunit.xml'
    
