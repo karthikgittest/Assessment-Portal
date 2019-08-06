@@ -22,7 +22,7 @@ steps:
 - script: pip install robotframework robotframework-selenium2library && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . -x outputxunit.xml Tests/headless.robot
+- powershell: robot --pythonpath . -x outputxunit.xml -x output.xml -x log.html -x report.htmlTests/headless.robot
   displayName: 'Run Robot Tests'
 
 - task: PublishTestResults@1
