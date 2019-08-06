@@ -20,7 +20,7 @@ ${null_pwd}
 ${email}  karthik@banerasoft.biz
 ${password}  I@s12345
 ${Delay}  30
-${forgot_pwd_response}  WE'VE JUST SENT YOU AN EMAIL TO RESET YOUR PASSWORD.
+${forgot_pwd_response}  If your email was found, you will receive instructions shortly!
 ${invalid_data_warning}  WRONG EMAIL OR PASSWORD.
 ${null_email_warning}  Can't be blank
 ${null_pwd_warning}  Can't be blank 
@@ -90,7 +90,7 @@ ${WrittenComents2}  Response2 Response2 Response2 Response2 Response2 Response2 
    Input Text  xpath=//input[@type='email']  ${email}
    Input Text  xpath=//input[@type='password']  ${password} 
    Click Element  xpath=//span[contains(text(),'Log In')] 
-   Title Should Be  Assessments - CCL
+   Title Should Be  Center for Creative Leadership
    Sleep  3 seconds
 
 07_Start Self Survey
