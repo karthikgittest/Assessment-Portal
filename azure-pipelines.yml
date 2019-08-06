@@ -12,11 +12,13 @@ strategy:
   matrix:
     Python27:
       python.version: '2.7'
+  maxParallel: 1
 
 steps:
 - task: UsePythonVersion@0
   inputs:
    versionSpec: '$(python.version)'
+   architecture: 'x64'
   displayName: 'Use Python $(python.version)'
 
 - script: pip install robotframework robotframework-selenium2library && npm install chromedriver
@@ -29,8 +31,8 @@ steps:
   inputs:
    testResultsFiles: outputxunit.xml
    searchFolder: 'D:\a\1\s\'
-   condition: succeededOrFailed()
-   displayName: 'Publish Test Results outputxunit.xml'
+  condition: succeededOrFailed()
+  displayName: 'Publish Test Results outputxunit.xml'
    
 
 
