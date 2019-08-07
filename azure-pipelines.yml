@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'vs2015-win2012r2'
 strategy:
   matrix:
     Python27:
@@ -30,7 +30,7 @@ steps:
 - task: PublishTestResults@1
   inputs:
    testResultsFiles: outputxunit.xml
-   searchFolder: 'C:\Users\YADAVK\Desktop\Results'
+   searchFolder: 'D:\a\1\s\'
   condition: succeededOrFailed()
   displayName: 'Publish Test Results outputxunit.xml'
    
