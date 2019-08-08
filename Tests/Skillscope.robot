@@ -36,7 +36,48 @@ ${WrittenComents1}  Response1 Response1 Response1 Response1 Response1 Response1 
   Set Selenium Implicit Wait  ${Delay}
   Maximize Browser Window
 
+02_Forgot Password
+  Wait Until Element Is Visible  xpath=//a[@class='auth0-lock-alternative-link']  timeout=30
+  #Click Element  xpath=//a[@class='auth0-lock-alternative-link' and contains(text(),'Don't remember your password?')]
+  Sleep  3 seconds
+  Click Element  xpath=//a[@class='auth0-lock-alternative-link']
 
+03_Enter Email id to reset password and validate success message
+  Wait Until Element Is Visible  xpath=//input[@class='auth0-lock-input']  timeout=30
+  Input Text  xpath=//input[@class='auth0-lock-input']  ${Forgot_Email}
+  Click Element  xpath=//span[contains(text(),'Send email')]
+  #Validate Success Message of Reset Email
+  Sleep  3 seconds
+  Wait Until Element Is Visible  xpath=//span[@class='animated fadeInUp']  timeout=30
+  Element Text Should Be  xpath=//span[@class='animated fadeInUp']  ${forgot_pwd_response}  message=None
+  Go Back
+  Sleep  3 seconds
+
+04_Login to Assessment Portal with Invalid Data
+  Wait Until Element Is Visible  xpath=//input[@type='email']  timeout=30  error=User Name Input field not found 
+  Input Text  xpath=//input[@type='email']  ${invalid_email}
+  Input Text  xpath=//input[@type='password']  ${invalid_pwd} 
+  Click Element  xpath=//span[contains(text(),'Log In')] 
+  #Validate Warning Message
+  Sleep  2 seconds
+  Wait Until Element Is Visible  xpath=//span[@class='animated fadeInUp']  timeout=30
+  Element Text Should Be  xpath=//span[@class='animated fadeInUp']  ${invalid_data_warning}  message=None
+  Sleep  3 seconds
+  Go Back
+
+05_Login to Assessment Portal with null data
+  Wait Until Element Is Visible  xpath=//input[@type='email']  timeout=30  error=User Name Input field not found 
+  Input Text  xpath=//input[@type='email']  ${null_email}
+  Input Text  xpath=//input[@type='password']  ${null_pwd} 
+  Click Element  xpath=//span[contains(text(),'Log In')] 
+  #Validate Email Warning Message
+  Wait Until Element Is Visible  xpath=//div[@class='auth0-lock-input-block auth0-lock-input-email auth0-lock-error']  timeout=30
+  Element Text Should Be  xpath=//div[@class='auth0-lock-input-block auth0-lock-input-email auth0-lock-error']  ${null_email_warning}  message=None
+  #Validate pwd Warning Message
+  Wait Until Element Is Visible  xpath=//div[@class='auth0-lock-input-block auth0-lock-input-password auth0-lock-error']  timeout=30
+  Element Text Should Be  xpath=//div[@class='auth0-lock-input-block auth0-lock-input-password auth0-lock-error']  ${null_pwd_warning}  message=None
+  Sleep  3 seconds
+  Go Back
 
 06_Login to Assessment Portal
    Wait Until Element Is Visible  xpath=//input[@type='email']  timeout=30  error=User Name Input field not found 
