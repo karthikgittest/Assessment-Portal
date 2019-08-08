@@ -24,7 +24,7 @@ steps:
 - script: pip install robotframework robotframework-selenium2library && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . -x outputxunit.xml Tests/01_Assessments.robot
+- powershell: robot --pythonpath . -x outputxunit.xml Tests/WPB5_Assessments.robot
   displayName: 'Run Robot Tests'
 
 - task: PublishTestResults@1
