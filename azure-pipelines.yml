@@ -21,10 +21,10 @@ steps:
    architecture: 'x64'
   displayName: 'Use Python $(python.version)'
 
-- script: pip install robotframework robotframework-selenium2library robotframework-excelLibrary && npm install chromedriver
+- script: pip install robotframework robotframework-selenium2library robotframework-excellibrary && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . -x outputxunit.xml Tests/WPB5_Assessments.robot
+- powershell: robot --pythonpath . -x outputxunit.xml Tests/WPB5.robot
   displayName: 'Run Robot Tests'
 
 - task: PublishTestResults@1
