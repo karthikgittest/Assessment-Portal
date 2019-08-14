@@ -24,7 +24,7 @@ steps:
 - script: pip install robotframework robotframework-selenium2library robotframework-excellibrary && npm install geckodriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . -x outputxunit.xml Tests/headless.robot
+- powershell: robot --pythonpath . -x outputxunit.xml Tests/firefox.robot
   displayName: 'Run Robot Tests'
 
 - task: PublishTestResults@1
