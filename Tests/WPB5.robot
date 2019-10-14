@@ -20,7 +20,7 @@ ${null_pwd}
 ${email}  karthik@banerasoft.biz
 ${password}  I@s12345
 ${Delay}  30
-${forgot_pwd_response}  If your email was found, you will receive instructions shortly!
+${forgot_pwd_response}  IF YOUR EMAIL WAS FOUND, YOU WILL RECEIVE INSTRUCTIONS SHORTLY!
 ${invalid_data_warning}  WRONG EMAIL OR PASSWORD.
 ${null_email_warning}  Can't be blank
 ${null_pwd_warning}  Can't be blank 
@@ -94,11 +94,11 @@ ${WrittenComents2}  Response2 Response2 Response2 Response2 Response2 Response2 
    Sleep  3 seconds
 
 07_Start Self Survey
-  Wait Until Element Is Visible  xpath=(//span[contains(text(),'Self')])[1]  timeout=30
-  Click Element  xpath=(//span[contains(text(),'Self')])[1]
-  #Wait Until Element Is Visible  xpath=(//span[contains(text(),'Self')])[5]  timeout=60
+  #Wait Until Element Is Visible  xpath=(//span[contains(text(),'Self')])[1]  timeout=30
+  #Click Element  xpath=(//span[contains(text(),'Self')])[1]
+  Wait Until Element Is Visible  xpath=(//span[contains(text(),'Self')])[5]  timeout=60
   Sleep  3 seconds
-  #Click Element  xpath=(//span[contains(text(),'Self')])[5]
+  Click Element  xpath=(//span[contains(text(),'Self')])[5]
 
   #${IsElementVisible}=  Run Keyword And Return Status  Element Should Be Visible   ${//span[contains(text(),'Start Survey')]}
   #Run Keyword If  ${IsElementVisible}  ELSE  Wait Until Element Is Visible  xpath=//button[@class='mat-icon-button']  #timeout=40

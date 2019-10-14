@@ -2,14 +2,8 @@
 Library  Selenium2Library
 Library  OperatingSystem
 Library  Collections
-Library  pyautogui
-Library  Dialogs
 
-
-Resource  ../Keywords/Common.robot
-#Resource  ../Keywords/Search.robot
-#Variables  ../TestData/SearchData.py
-
+Resource  ../Keywords/Common_Skillscope.robot
 
 *** Variables ***
 ${Forgot_Email}  forgot_password@ccl.example.com
@@ -20,7 +14,7 @@ ${null_pwd}
 ${email}  karthik@banerasoft.biz
 ${password}  I@s12345
 ${Delay}  30
-${forgot_pwd_response}  If your email was found, you will receive instructions shortly!
+${forgot_pwd_response}  IF YOUR EMAIL WAS FOUND, YOU WILL RECEIVE INSTRUCTIONS SHORTLY!
 ${invalid_data_warning}  WRONG EMAIL OR PASSWORD.
 ${null_email_warning}  Can't be blank
 ${null_pwd_warning}  Can't be blank 
@@ -33,7 +27,7 @@ ${RaterEmail1}  selenium_new1@ccl.example.com
 ${RaterFname1}  Rater1
 ${RaterLname1}  New1
 ${WrittenComents1}  Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response1 Response11
-${WrittenComents2}  Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response2 Response22 
+
 
 *** Test cases ***
 01_Launch Assessment Portal
@@ -94,27 +88,24 @@ ${WrittenComents2}  Response2 Response2 Response2 Response2 Response2 Response2 
    Sleep  3 seconds
 
 07_Start Self Survey
-  Wait Until Element Is Visible  xpath=(//span[contains(text(),'Self')])[1]  timeout=30
-  Click Element  xpath=(//span[contains(text(),'Self')])[1]
-  #Wait Until Element Is Visible  xpath=(//span[contains(text(),'Self')])[5]  timeout=60
+  Wait Until Element Is Visible  xpath=(//span[contains(text(),'Self')])[15]  timeout=60
   Sleep  3 seconds
-  #Click Element  xpath=(//span[contains(text(),'Self')])[5]
-
-  #${IsElementVisible}=  Run Keyword And Return Status  Element Should Be Visible   ${//span[contains(text(),'Start Survey')]}
-  #Run Keyword If  ${IsElementVisible}  ELSE  Wait Until Element Is Visible  xpath=//button[@class='mat-icon-button']  #timeout=40
+  Click Element  xpath=(//span[contains(text(),'Self')])[15]
   Wait Until Element Is Visible  xpath=//button[@class='mat-icon-button']  timeout=40
   Click Element  xpath=//button[@class='mat-icon-button']
   Sleep  3 seconds
   Save Selenium Screenshot
   Wait Until Element Is Visible  xpath=//button[@class='mat-menu-item ng-star-inserted'][1]  timeout=40
   Click Element  xpath=//button[@class='mat-menu-item ng-star-inserted'][1]
-
+  Information Section
   Wait Until Element Is Visible  xpath=//span[contains(text(),'Start Survey')]  timeout=40
   Save Selenium Screenshot
   Click Element  xpath=//span[contains(text(),'Start Survey')]
 
+08_Skills_and_Behaviors
   Test data for Survey1
   Save Selenium Screenshot
+  Information Section
   Wait Until Element Is Visible  xpath=//span[contains(text(),'Next Group')]  timeout=40
   Click Element  xpath=//span[contains(text(),'Next Group')]
   
@@ -137,73 +128,60 @@ ${WrittenComents2}  Response2 Response2 Response2 Response2 Response2 Response2 
   Click Element  xpath=//span[contains(text(),'Next Group')]
   
   Sleep  3 seconds
-  Test data for Survey2
-  Save Selenium Screenshot
-  Wait Until Element Is Visible  xpath=//span[contains(text(),'Next')]  timeout=40
-  Click Element  xpath=//span[contains(text(),'Next')]
-  
-  #Derailers
-  Sleep  3 seconds
   Test data for Survey1
-  Save Selenium Screenshot
-  Wait Until Element Is Visible  xpath=//span[contains(text(),'Next')]  timeout=40
-  Click Element  xpath=//span[contains(text(),'Next Group')]
-
-  Sleep  3 seconds
-  Test data for Derailer2
   Save Selenium Screenshot
   Wait Until Element Is Visible  xpath=//span[contains(text(),'Next')]  timeout=40
   Click Element  xpath=//span[contains(text(),'Next')]
-  
-  #ImpforSuccess
+    
+09_Important_for_success
   Test data for ImpSuccess  
   Save Selenium Screenshot
+  Information Section
   Wait Until Element Is Visible  xpath=//span[contains(text(),'Next')]  timeout=40
   Click Element  xpath=//span[contains(text(),'Next')]
   
-  #WrittenComments
+10_Written_Comments
   Wait Until Element Is Visible  xpath=(//*[starts-with(@id,'mat-input-')])[1]  timeout=40
   Input Text  xpath=(//*[starts-with(@id,'mat-input-')])[1]  ${WrittenComents1}
-  Wait Until Element Is Visible  xpath=(//*[starts-with(@id,'mat-input-')])[2]  timeout=40
-  Input Text  xpath=(//*[starts-with(@id,'mat-input-')])[2]  ${WrittenComents2}
   Save Selenium Screenshot
+  Information Section
   Sleep  3 seconds
   Wait Until Element Is Visible  xpath=//span[contains(text(),'Next')]  timeout=40
   Click Element  xpath=//span[contains(text(),'Next')]
   
-  #Derailers
-  Wait Until Element Is Visible  xpath=(//*[@class='mat-radio-inner-circle'])[1]  timeout=40
-  Click Element  xpath=(//*[@class='mat-radio-inner-circle'])[1]
-  Wait Until Element Is Visible  xpath=(//*[@class='mat-radio-inner-circle'])[9]  timeout=40
-  Click Element  xpath=(//*[@class='mat-radio-inner-circle'])[9]
-  #Review
+ 11_Review
   Wait Until Element Is Visible  xpath=(//span[contains(text(),'Review')])[2]  timeout=40
   Save Selenium Screenshot
+  Information Section
   Sleep  3 seconds
   Click Element  xpath=(//span[contains(text(),'Review')])[2]
   
-  #YourResponses
+12_Your_Responses
   Wait Until Element Is Visible  xpath=//span[contains(text(),'Your Responses')]  timeout=40
   Save Selenium Screenshot
-  #ReturnToTheSurvey
-  #Wait Until Element Is Visible  xpath=//span[contains(text(),'98')]
-  #Click Element  xpath=//span[contains(text(),'98')]
-  #Sleep   4 seconds
-  #Save Selenium Screenshot
+  Information Section
 
-  #SubmitSurvey
-  Wait Until Element Is Visible  xpath=//span[contains(text(),'SUBMIT SURVEY')]  timeout=40
-  Click Button  xpath=//span[contains(text(),'SUBMIT SURVEY')]
+13_Unanswered_Survey
+  Wait Until Element Is Visible  xpath=//span[contains(text(),'98')]
+  Sleep  2 seconds
+  Execute Javascript  scroll(769, 90)
+  Click Element  xpath=//span[contains(text(),'98')]
+  Sleep  4 seconds
+  Save Selenium Screenshot
 
-08_Rater_Management_Page
+#13_Submit_Survey
+  #Wait Until Element Is Visible  xpath=//span[contains(text(),'SUBMIT SURVEY')]  timeout=40
+  #Click Button  xpath=//span[contains(text(),'SUBMIT SURVEY')]
+
+14_Rater_Management_Page
   Click Element  xpath=//button[@class='mat-icon-button']
   Sleep  3 seconds
   Click Element  xpath=//span[@class='menu icon-item']
   Sleep  3 seconds
-  Wait Until Element Is Visible  xpath=(//span[contains(text(),'Raters')])[5]  timeout=30
-  Click Element  xpath=(//span[contains(text(),'Raters')])[5]
+  Wait Until Element Is Visible  xpath=(//span[contains(text(),'Raters')])[7]  timeout=30
+  Click Element  xpath=(//span[contains(text(),'Raters')])[7]
 
-09_Add_Rater
+15_Add_Rater
   Wait Until Element Is Visible  xpath=(//span[contains(text(),'Add')])[1]  timeout=30
   Click Element  xpath=(//span[contains(text(),'Add')])[1]
   Wait Until Element Is Visible  xpath=(//input[@formcontrolname='email'])[1]  timeout=30
@@ -215,12 +193,13 @@ ${WrittenComents2}  Response2 Response2 Response2 Response2 Response2 Response2 
   Wait Until Element Is Visible  xpath=(.//mat-option[@role='option'])[1]  timeout=30
   Click Element  xpath=(//mat-option[@role='option'])[1]
   Click Element  xpath=//span[contains(text(),'Invite')]
-  Sleep  2 seconds
+  Sleep  3 seconds
   
-10_Validate Duplicate Rater
+16_Validate Duplicate Rater
   Validate Duplicate Rater
-  Sleep  2 seconds
-11_Expand Profile
+  Sleep  3 seconds
+
+17_Expand_Profile
   Wait Until Element Is Visible  xpath=//span[@aria-haspopup="true"]  timeout=30
   Click Element  xpath=//span[@aria-haspopup="true"]
   Wait Until Element Is Visible  xpath=//button[contains(text(),'Contact Us')]  timeout=30
@@ -244,10 +223,8 @@ ${WrittenComents2}  Response2 Response2 Response2 Response2 Response2 Response2 
   Select Window       title=@{title_var}[1]   
   Sleep  3 seconds    
   Close Window
-
   
-
-#11_Logout from Assessment Portal
+#18_Logout_AssessmentPortal
   #Wait Until Element Is Visible  xpath=//span[contains(text(),'Log out')]  timeout=30
   #Click Element  xpath=//span[contains(text(),'Log out')] 
 

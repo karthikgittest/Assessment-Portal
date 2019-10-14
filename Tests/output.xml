@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190715 17:47:51.231" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
-<suite source="D:\Assessment-Portal\Tests\Assessments_Text_Compare_wpb5.robot" id="s1" name="Assessments Text Compare wpb5">
+<robot generated="20190905 18:45:19.902" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="D:\Assessment-Portal\Tests\CSI.robot" id="s1" name="CSI">
 <test id="s1-t1" name="01_Launch Assessment Portal">
 <kw name="Set Environment Variable" library="OperatingSystem">
 <doc>Sets an environment variable to a specified value.</doc>
@@ -8,8 +8,8 @@
 <arg>webdriver.chrome.driver</arg>
 <arg>D:\MyStuff\Selenium\chromedriver.exe</arg>
 </arguments>
-<msg timestamp="20190715 17:47:52.793" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'D:MyStuffSeleniumchromedriver.exe'.</msg>
-<status status="PASS" endtime="20190715 17:47:52.794" starttime="20190715 17:47:52.793"></status>
+<msg timestamp="20190905 18:45:20.283" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'D:MyStuffSeleniumchromedriver.exe'.</msg>
+<status status="PASS" endtime="20190905 18:45:20.283" starttime="20190905 18:45:20.283"></status>
 </kw>
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -17,23 +17,23 @@
 <arg>https://assessments-uat.ccl.org</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20190715 17:47:52.796" level="INFO">Opening browser 'chrome' to base url 'https://assessments-uat.ccl.org'.</msg>
-<status status="PASS" endtime="20190715 17:49:23.583" starttime="20190715 17:47:52.795"></status>
+<msg timestamp="20190905 18:45:20.284" level="INFO">Opening browser 'chrome' to base url 'https://assessments-uat.ccl.org'.</msg>
+<status status="PASS" endtime="20190905 18:45:37.521" starttime="20190905 18:45:20.284"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>${Delay}</arg>
 </arguments>
-<status status="PASS" endtime="20190715 17:49:23.588" starttime="20190715 17:49:23.584"></status>
+<status status="PASS" endtime="20190905 18:45:37.540" starttime="20190905 18:45:37.523"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190715 17:49:24.880" starttime="20190715 17:49:23.589"></status>
+<status status="PASS" endtime="20190905 18:45:38.685" starttime="20190905 18:45:37.542"></status>
 </kw>
-<status status="PASS" endtime="20190715 17:49:24.881" critical="yes" starttime="20190715 17:47:52.790"></status>
+<status status="PASS" endtime="20190905 18:45:38.686" critical="yes" starttime="20190905 18:45:20.282"></status>
 </test>
-<test id="s1-t2" name="02_Login to Assessment Portal">
+<test id="s1-t2" name="06_Login to Assessment Portal">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
@@ -41,7 +41,7 @@
 <arg>timeout=30</arg>
 <arg>error=User Name Input field not found</arg>
 </arguments>
-<status status="PASS" endtime="20190715 17:49:27.176" starttime="20190715 17:49:24.887"></status>
+<status status="PASS" endtime="20190905 18:45:48.003" starttime="20190905 18:45:38.689"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -49,8 +49,8 @@
 <arg>xpath=//input[@type='email']</arg>
 <arg>${email}</arg>
 </arguments>
-<msg timestamp="20190715 17:49:27.177" level="INFO">Typing text 'karthik@banerasoft.biz' into text field 'xpath=//input[@type='email']'.</msg>
-<status status="PASS" endtime="20190715 17:49:28.721" starttime="20190715 17:49:27.177"></status>
+<msg timestamp="20190905 18:45:48.004" level="INFO">Typing text 'karthik@banerasoft.biz' into text field 'xpath=//input[@type='email']'.</msg>
+<status status="PASS" endtime="20190905 18:45:48.758" starttime="20190905 18:45:48.003"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -58,108 +58,1310 @@
 <arg>xpath=//input[@type='password']</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20190715 17:49:28.722" level="INFO">Typing text 'I@s12345' into text field 'xpath=//input[@type='password']'.</msg>
-<status status="PASS" endtime="20190715 17:49:29.177" starttime="20190715 17:49:28.722"></status>
+<msg timestamp="20190905 18:45:48.760" level="INFO">Typing text 'I@s12345' into text field 'xpath=//input[@type='password']'.</msg>
+<status status="PASS" endtime="20190905 18:45:49.096" starttime="20190905 18:45:48.759"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//span[contains(text(),'Log In')]</arg>
 </arguments>
-<msg timestamp="20190715 17:49:29.178" level="INFO">Clicking element 'xpath=//span[contains(text(),'Log In')]'.</msg>
-<status status="PASS" endtime="20190715 17:49:30.459" starttime="20190715 17:49:29.178"></status>
+<msg timestamp="20190905 18:45:49.097" level="INFO">Clicking element 'xpath=//span[contains(text(),'Log In')]'.</msg>
+<status status="PASS" endtime="20190905 18:45:49.286" starttime="20190905 18:45:49.097"></status>
 </kw>
 <kw name="Title Should Be" library="Selenium2Library">
 <doc>Verifies that current page title equals ``title``.</doc>
 <arguments>
-<arg>Assessments - CCL</arg>
+<arg>Center for Creative Leadership</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190715 17:49:31.318" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190715 17:49:31.319" starttime="20190715 17:49:30.491"></status>
+<msg timestamp="20190905 18:45:49.302" level="INFO">Page title is 'Center for Creative Leadership'.</msg>
+<status status="PASS" endtime="20190905 18:45:49.302" starttime="20190905 18:45:49.286"></status>
 </kw>
-<msg timestamp="20190715 17:49:31.394" level="FAIL">Title should have been 'Assessments - CCL' but was 'Center for Creative Leadership'.</msg>
-<status status="FAIL" endtime="20190715 17:49:31.394" starttime="20190715 17:49:30.461"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:45:52.303" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:45:52.303" starttime="20190905 18:45:49.303"></status>
 </kw>
-<status status="FAIL" endtime="20190715 17:49:31.395" critical="yes" starttime="20190715 17:49:24.886">Title should have been 'Assessments - CCL' but was 'Center for Creative Leadership'.</status>
+<status status="PASS" endtime="20190905 18:45:52.304" critical="yes" starttime="20190905 18:45:38.688"></status>
 </test>
-<test id="s1-t3" name="03_Compare_form_items">
+<test id="s1-t3" name="07_Self_Survey">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=(//span[contains(text(),'Self')])[3]</arg>
-<arg>timeout=30</arg>
+<arg>timeout=60</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190715 17:49:40.439" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20190715 17:49:40.440" starttime="20190715 17:49:40.247"></status>
+<status status="PASS" endtime="20190905 18:46:08.703" starttime="20190905 18:45:52.308"></status>
 </kw>
-<msg timestamp="20190715 17:49:40.440" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20190715 17:49:40.589" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20190715 17:49:40.590" starttime="20190715 17:49:31.400"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:11.704" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:11.704" starttime="20190905 18:46:08.703"></status>
 </kw>
-<status status="FAIL" endtime="20190715 17:49:40.591" critical="yes" starttime="20190715 17:49:31.398">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[contains(text(),'Self')])[3]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:11.705" level="INFO">Clicking element 'xpath=(//span[contains(text(),'Self')])[3]'.</msg>
+<status status="PASS" endtime="20190905 18:46:12.016" starttime="20190905 18:46:11.705"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//button[@class='mat-icon-button']</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:15.707" starttime="20190905 18:46:12.017"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@class='mat-icon-button']</arg>
+</arguments>
+<msg timestamp="20190905 18:46:15.711" level="INFO">Clicking element 'xpath=//button[@class='mat-icon-button']'.</msg>
+<status status="PASS" endtime="20190905 18:46:16.010" starttime="20190905 18:46:15.710"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:19.011" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:19.011" starttime="20190905 18:46:16.010"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//button[@class='mat-menu-item ng-star-inserted'][1]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:19.067" starttime="20190905 18:46:19.012"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@class='mat-menu-item ng-star-inserted'][1]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:19.069" level="INFO">Clicking element 'xpath=//button[@class='mat-menu-item ng-star-inserted'][1]'.</msg>
+<status status="PASS" endtime="20190905 18:46:19.365" starttime="20190905 18:46:19.069"></status>
+</kw>
+<status status="PASS" endtime="20190905 18:46:19.366" critical="yes" starttime="20190905 18:45:52.307"></status>
 </test>
-<status status="FAIL" endtime="20190715 17:49:40.597" starttime="20190715 17:47:51.235"></status>
+<test id="s1-t4" name="09_Select I Understand Checkbox">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>checked</arg>
+</arguments>
+<assign>
+<var>${checkbox_status}</var>
+</assign>
+<msg timestamp="20190905 18:46:19.460" level="INFO">${checkbox_status} = true</msg>
+<status status="PASS" endtime="20190905 18:46:19.460" starttime="20190905 18:46:19.371"></status>
+</kw>
+<kw name="Convert To Boolean" library="BuiltIn">
+<doc>Converts the given item to Boolean true or false.</doc>
+<arguments>
+<arg>${checkbox_status}</arg>
+</arguments>
+<assign>
+<var>${checkbox_status}</var>
+</assign>
+<msg timestamp="20190905 18:46:19.462" level="INFO">${checkbox_status} = True</msg>
+<status status="PASS" endtime="20190905 18:46:19.462" starttime="20190905 18:46:19.461"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${checkbox_status}==False</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>xpath=//span[contains(text(),'Start Survey')]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),'Start Survey')]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:19.464" level="INFO">Clicking element 'xpath=//span[contains(text(),'Start Survey')]'.</msg>
+<status status="PASS" endtime="20190905 18:46:20.318" starttime="20190905 18:46:19.464"></status>
+</kw>
+<status status="PASS" endtime="20190905 18:46:20.318" starttime="20190905 18:46:19.463"></status>
+</kw>
+<status status="PASS" endtime="20190905 18:46:20.319" critical="yes" starttime="20190905 18:46:19.367"></status>
+</test>
+<test id="s1-t5" name="10_Behavioral_Inventory">
+<kw name="Test data for Survey1" library="Common_CSI">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[3]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:20.387" starttime="20190905 18:46:20.324"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:20.388" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:20.401" starttime="20190905 18:46:20.387"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[3]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:20.401" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[3]'.</msg>
+<status status="PASS" endtime="20190905 18:46:20.556" starttime="20190905 18:46:20.401"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:20.603" starttime="20190905 18:46:20.556"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:20.604" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:20.614" starttime="20190905 18:46:20.603"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:20.615" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[1]'.</msg>
+<status status="PASS" endtime="20190905 18:46:20.884" starttime="20190905 18:46:20.614"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[5]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:21.000" starttime="20190905 18:46:20.884"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:21.001" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:21.013" starttime="20190905 18:46:21.000"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[5]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:21.014" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[5]'.</msg>
+<status status="PASS" endtime="20190905 18:46:21.164" starttime="20190905 18:46:21.013"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:21.231" starttime="20190905 18:46:21.164"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:24.232" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:24.232" starttime="20190905 18:46:21.231"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:24.233" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[2]'.</msg>
+<status status="PASS" endtime="20190905 18:46:24.373" starttime="20190905 18:46:24.232"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[9]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:24.452" starttime="20190905 18:46:24.373"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:24.453" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:24.460" starttime="20190905 18:46:24.453"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[9]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:24.460" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[9]'.</msg>
+<status status="PASS" endtime="20190905 18:46:24.590" starttime="20190905 18:46:24.460"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:24.638" starttime="20190905 18:46:24.590"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:24.639" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:24.657" starttime="20190905 18:46:24.639"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:27.659" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:27.659" starttime="20190905 18:46:24.659"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:27.660" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[3]'.</msg>
+<status status="PASS" endtime="20190905 18:46:27.797" starttime="20190905 18:46:27.659"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[15]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:27.884" starttime="20190905 18:46:27.798"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:27.885" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:27.891" starttime="20190905 18:46:27.885"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[15]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:27.891" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[15]'.</msg>
+<status status="PASS" endtime="20190905 18:46:28.051" starttime="20190905 18:46:27.891"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:28.132" starttime="20190905 18:46:28.051"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:28.133" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:28.201" starttime="20190905 18:46:28.132"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:31.202" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:31.202" starttime="20190905 18:46:28.201"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:31.203" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[4]'.</msg>
+<status status="PASS" endtime="20190905 18:46:31.337" starttime="20190905 18:46:31.202"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[17]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:31.442" starttime="20190905 18:46:31.338"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:31.443" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:31.453" starttime="20190905 18:46:31.442"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[17]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:31.454" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[17]'.</msg>
+<status status="PASS" endtime="20190905 18:46:31.734" starttime="20190905 18:46:31.454"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:31.755" starttime="20190905 18:46:31.735"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:31.756" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:31.769" starttime="20190905 18:46:31.755"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:34.770" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:34.770" starttime="20190905 18:46:31.769"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:34.771" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[1]'.</msg>
+<status status="PASS" endtime="20190905 18:46:34.884" starttime="20190905 18:46:34.770"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[23]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:34.993" starttime="20190905 18:46:34.884"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:34.995" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:35.017" starttime="20190905 18:46:34.993"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[23]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:35.018" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[23]'.</msg>
+<status status="PASS" endtime="20190905 18:46:35.274" starttime="20190905 18:46:35.017"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:35.292" starttime="20190905 18:46:35.274"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:35.292" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:35.304" starttime="20190905 18:46:35.292"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:38.304" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:38.304" starttime="20190905 18:46:35.304"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:38.305" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[2]'.</msg>
+<status status="PASS" endtime="20190905 18:46:38.661" starttime="20190905 18:46:38.305"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[27]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:38.757" starttime="20190905 18:46:38.662"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:38.757" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:38.765" starttime="20190905 18:46:38.757"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[27]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:38.766" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[27]'.</msg>
+<status status="PASS" endtime="20190905 18:46:38.937" starttime="20190905 18:46:38.765"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:38.956" starttime="20190905 18:46:38.937"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:38.956" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:39.000" starttime="20190905 18:46:38.956"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:42.001" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:42.001" starttime="20190905 18:46:39.000"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:42.002" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[3]'.</msg>
+<status status="PASS" endtime="20190905 18:46:42.213" starttime="20190905 18:46:42.001"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[29]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:42.344" starttime="20190905 18:46:42.213"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:42.345" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:42.353" starttime="20190905 18:46:42.345"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[29]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:42.353" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[29]'.</msg>
+<status status="PASS" endtime="20190905 18:46:42.491" starttime="20190905 18:46:42.353"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:42.507" starttime="20190905 18:46:42.491"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:42.507" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:42.520" starttime="20190905 18:46:42.507"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:45.520" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:45.520" starttime="20190905 18:46:42.520"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:45.521" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[4]'.</msg>
+<status status="PASS" endtime="20190905 18:46:45.660" starttime="20190905 18:46:45.520"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[33]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:45.819" starttime="20190905 18:46:45.660"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:45.820" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:45.826" starttime="20190905 18:46:45.820"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[33]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:45.827" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[33]'.</msg>
+<status status="PASS" endtime="20190905 18:46:45.995" starttime="20190905 18:46:45.826"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:46.076" starttime="20190905 18:46:45.995"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:46.077" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:46.104" starttime="20190905 18:46:46.076"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:49.105" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:49.105" starttime="20190905 18:46:46.104"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:49.107" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[1]'.</msg>
+<status status="PASS" endtime="20190905 18:46:49.325" starttime="20190905 18:46:49.106"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[37]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:49.418" starttime="20190905 18:46:49.325"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:49.420" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:49.426" starttime="20190905 18:46:49.418"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[37]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:49.427" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[37]'.</msg>
+<status status="PASS" endtime="20190905 18:46:49.578" starttime="20190905 18:46:49.426"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:49.596" starttime="20190905 18:46:49.578"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:49.597" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:49.607" starttime="20190905 18:46:49.596"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:52.609" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:52.609" starttime="20190905 18:46:49.607"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:52.610" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[2]'.</msg>
+<status status="PASS" endtime="20190905 18:46:52.785" starttime="20190905 18:46:52.609"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[41]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:52.916" starttime="20190905 18:46:52.785"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:52.917" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:52.925" starttime="20190905 18:46:52.917"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[41]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:52.926" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[41]'.</msg>
+<status status="PASS" endtime="20190905 18:46:53.091" starttime="20190905 18:46:52.925"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:53.107" starttime="20190905 18:46:53.091"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:53.108" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:53.126" starttime="20190905 18:46:53.108"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:56.126" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:56.126" starttime="20190905 18:46:53.126"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:56.128" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[3]'.</msg>
+<status status="PASS" endtime="20190905 18:46:56.340" starttime="20190905 18:46:56.127"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[47]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:56.494" starttime="20190905 18:46:56.341"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:56.495" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:56.505" starttime="20190905 18:46:56.494"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[47]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:56.506" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[47]'.</msg>
+<status status="PASS" endtime="20190905 18:46:56.667" starttime="20190905 18:46:56.506"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:46:56.687" starttime="20190905 18:46:56.668"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:46:56.688" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:46:56.695" starttime="20190905 18:46:56.687"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:46:59.696" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:46:59.696" starttime="20190905 18:46:56.695"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+</arguments>
+<msg timestamp="20190905 18:46:59.697" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[4]'.</msg>
+<status status="PASS" endtime="20190905 18:46:59.842" starttime="20190905 18:46:59.696"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[51]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:00.007" starttime="20190905 18:46:59.842"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:00.007" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:00.016" starttime="20190905 18:47:00.007"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[51]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:00.017" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[51]'.</msg>
+<status status="PASS" endtime="20190905 18:47:00.157" starttime="20190905 18:47:00.017"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:00.174" starttime="20190905 18:47:00.157"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:00.174" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:00.192" starttime="20190905 18:47:00.174"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:03.193" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:03.193" starttime="20190905 18:47:00.192"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:03.194" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[1]'.</msg>
+<status status="PASS" endtime="20190905 18:47:03.353" starttime="20190905 18:47:03.193"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[53]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:03.481" starttime="20190905 18:47:03.353"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:03.482" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:03.488" starttime="20190905 18:47:03.481"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[53]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:03.489" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[53]'.</msg>
+<status status="PASS" endtime="20190905 18:47:03.635" starttime="20190905 18:47:03.488"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:03.651" starttime="20190905 18:47:03.635"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:03.652" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:03.657" starttime="20190905 18:47:03.652"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:06.658" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:06.658" starttime="20190905 18:47:03.657"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:06.660" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[2]'.</msg>
+<status status="PASS" endtime="20190905 18:47:06.925" starttime="20190905 18:47:06.659"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[57]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:07.068" starttime="20190905 18:47:06.926"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:07.069" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:07.080" starttime="20190905 18:47:07.069"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[57]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:07.081" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[57]'.</msg>
+<status status="PASS" endtime="20190905 18:47:07.319" starttime="20190905 18:47:07.081"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:07.335" starttime="20190905 18:47:07.319"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:07.336" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:07.345" starttime="20190905 18:47:07.336"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:10.346" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:10.346" starttime="20190905 18:47:07.346"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:10.347" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[3]'.</msg>
+<status status="PASS" endtime="20190905 18:47:10.625" starttime="20190905 18:47:10.346"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[61]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:10.775" starttime="20190905 18:47:10.626"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:10.776" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:10.792" starttime="20190905 18:47:10.775"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[61]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:10.793" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[61]'.</msg>
+<status status="PASS" endtime="20190905 18:47:10.939" starttime="20190905 18:47:10.793"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:10.955" starttime="20190905 18:47:10.939"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:10.984" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:10.991" starttime="20190905 18:47:10.955"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:13.991" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:13.991" starttime="20190905 18:47:10.991"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:13.992" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[4]'.</msg>
+<status status="PASS" endtime="20190905 18:47:14.133" starttime="20190905 18:47:13.991"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[65]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:14.257" starttime="20190905 18:47:14.133"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:14.261" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:14.272" starttime="20190905 18:47:14.258"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[65]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:14.272" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[65]'.</msg>
+<status status="PASS" endtime="20190905 18:47:14.454" starttime="20190905 18:47:14.272"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:14.491" starttime="20190905 18:47:14.454"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:14.491" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:14.502" starttime="20190905 18:47:14.491"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:17.503" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:17.503" starttime="20190905 18:47:14.502"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[1]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:17.505" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[1]'.</msg>
+<status status="PASS" endtime="20190905 18:47:17.748" starttime="20190905 18:47:17.504"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[71]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:17.903" starttime="20190905 18:47:17.748"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:17.903" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:17.917" starttime="20190905 18:47:17.903"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[71]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:17.917" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[71]'.</msg>
+<status status="PASS" endtime="20190905 18:47:18.103" starttime="20190905 18:47:17.917"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:18.119" starttime="20190905 18:47:18.103"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:18.120" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:18.126" starttime="20190905 18:47:18.120"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:21.127" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:21.127" starttime="20190905 18:47:18.126"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[2]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:21.128" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[2]'.</msg>
+<status status="PASS" endtime="20190905 18:47:21.298" starttime="20190905 18:47:21.127"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[73]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:21.494" starttime="20190905 18:47:21.299"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:21.494" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:21.503" starttime="20190905 18:47:21.494"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[73]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:21.504" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[73]'.</msg>
+<status status="PASS" endtime="20190905 18:47:21.752" starttime="20190905 18:47:21.503"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:21.771" starttime="20190905 18:47:21.753"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:21.772" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:21.785" starttime="20190905 18:47:21.772"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:24.786" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:24.786" starttime="20190905 18:47:21.785"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[3]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:24.787" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[3]'.</msg>
+<status status="PASS" endtime="20190905 18:47:24.968" starttime="20190905 18:47:24.786"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[79]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:25.049" starttime="20190905 18:47:24.969"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:25.049" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:25.056" starttime="20190905 18:47:25.049"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//div[@class='mat-select-value'])[79]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:25.057" level="INFO">Clicking element 'xpath=(//div[@class='mat-select-value'])[79]'.</msg>
+<status status="PASS" endtime="20190905 18:47:25.227" starttime="20190905 18:47:25.056"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" endtime="20190905 18:47:25.247" starttime="20190905 18:47:25.228"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>scroll(430, 270)</arg>
+</arguments>
+<msg timestamp="20190905 18:47:25.248" level="INFO">Executing JavaScript:
+scroll(430, 270)</msg>
+<status status="PASS" endtime="20190905 18:47:25.255" starttime="20190905 18:47:25.248"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20190905 18:47:28.255" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190905 18:47:28.255" starttime="20190905 18:47:25.255"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//span[@class='mat-option-text'])[4]</arg>
+</arguments>
+<msg timestamp="20190905 18:47:28.256" level="INFO">Clicking element 'xpath=(//span[@class='mat-option-text'])[4]'.</msg>
+<status status="PASS" endtime="20190905 18:47:28.486" starttime="20190905 18:47:28.256"></status>
+</kw>
+<status status="PASS" endtime="20190905 18:47:28.486" starttime="20190905 18:46:20.323"></status>
+</kw>
+<status status="PASS" endtime="20190905 18:47:28.488" critical="yes" starttime="20190905 18:46:20.322"></status>
+</test>
+<status status="PASS" endtime="20190905 18:47:28.506" starttime="20190905 18:45:19.910"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="2" pass="1">Critical Tests</stat>
-<stat fail="2" pass="1">All Tests</stat>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="2" id="s1" name="Assessments Text Compare wpb5" pass="1">Assessments Text Compare wpb5</stat>
+<stat fail="0" id="s1" name="CSI" pass="5">CSI</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190715 17:47:52.080" level="ERROR">Error in file 'D:\Assessment-Portal\Tests\Assessments_Text_Compare_wpb5.robot': Importing test library 'robot.libraries.Dialogs' failed: ImportError: DLL load failed: %1 is not a valid Win32 application.
-Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\robot\libraries\Dialogs.py", line 39, in &lt;module&gt;
-    from .dialogs_py import MessageDialog, PassFailDialog, InputDialog, SelectionDialog
-  File "C:\Python27\lib\site-packages\robot\libraries\dialogs_py.py", line 24, in &lt;module&gt;
-    from tkinter import (Button, Entry, Frame, Label, Listbox, TclError,
-  File "C:\Python27\lib\site-packages\tkinter\__init__.py", line 5, in &lt;module&gt;
-    from Tkinter import *
-  File "C:\Python27\lib\lib-tk\Tkinter.py", line 38, in &lt;module&gt;
-    import FixTk
-  File "C:\Python27\lib\lib-tk\FixTk.py", line 68, in &lt;module&gt;
-    import _tkinter
-PYTHONPATH:
-  C:\Windows\system32\python27.zip
-  C:\Python27\DLLs
-  C:\Python27\lib
-  C:\Python27\lib\plat-win
-  C:\Python27\lib\lib-tk
-  C:\Python27
-  C:\Python27\lib\site-packages
-  C:\Python27\lib\site-packages\win32
-  C:\Python27\lib\site-packages\win32\lib
-  C:\Python27\lib\site-packages\Pythonwin
-  C:\Python27\lib\site-packages\wx-3.0-msw</msg>
-<msg timestamp="20190715 17:49:40.440" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
 </errors>
 </robot>

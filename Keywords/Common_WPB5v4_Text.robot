@@ -7,6 +7,8 @@ Library  String
 ${RaterEmail1}  selenium_new1@ccl.example.com
 ${RaterFname1}  Rater1
 ${RaterLname1}  New1
+${path_excel}   D:\\Assessment-Portal\\WPB5_v4_FormItem.xls
+#${path_excel}   D:\\a\\1\\s\\WPB5_v4_FormItem.xls
 
 *** Keywords ***
 
@@ -14,7 +16,7 @@ Save Selenium Screenshot
   ${screenshot_index}=    Get Variable Value    ${screenshot_index}    ${0}
   Set Global Variable    ${screenshot_index}    ${screenshot_index.__add__(1)}
   ${time}=    Evaluate    str(time.time())    time
-  Set Screenshot Directory   D:\Assesment Portal\Tests\Screenshots
+  Set Screenshot Directory   D:\Assesment-Portal\Tests\Screenshots
   Capture Page Screenshot    WPB5-${time}-${screenshot_index}.png
 
 Information Section
