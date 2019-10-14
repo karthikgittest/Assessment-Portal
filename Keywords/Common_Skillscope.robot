@@ -7,7 +7,10 @@ Library  String
 ${RaterEmail1}  selenium_new1@ccl.example.com
 ${RaterFname1}  Rater1
 ${RaterLname1}  New1
+<<<<<<< HEAD
 ${path_excel}   D:\\Assessment-Portal\\WPB5_v4_FormItem.xls
+=======
+>>>>>>> aeca59a62a9ea0dc067153cd7c90e498a8c3b46f
 
 *** Keywords ***
 

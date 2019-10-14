@@ -160,6 +160,7 @@ ${WrittenComents1}  Response1 Response1 Response1 Response1 Response1 Response1 
   Wait Until Element Is Visible  xpath=//span[contains(text(),'Your Responses')]  timeout=40
   Save Selenium Screenshot
   Information Section
+<<<<<<< HEAD
 
 13_Unanswered_Survey
   Wait Until Element Is Visible  xpath=//span[contains(text(),'98')]
@@ -168,6 +169,13 @@ ${WrittenComents1}  Response1 Response1 Response1 Response1 Response1 Response1 
   Click Element  xpath=//span[contains(text(),'98')]
   Sleep  4 seconds
   Save Selenium Screenshot
+=======
+  #ReturnToTheSurvey
+  #Wait Until Element Is Visible  xpath=//span[contains(text(),'98')]
+  #Click Element  xpath=//span[contains(text(),'98')]
+  #Sleep   4 seconds
+  #Save Selenium Screenshot
+>>>>>>> aeca59a62a9ea0dc067153cd7c90e498a8c3b46f
 
 #13_Submit_Survey
   #Wait Until Element Is Visible  xpath=//span[contains(text(),'SUBMIT SURVEY')]  timeout=40

@@ -21,8 +21,13 @@ ${invalid_data_warning}  WRONG EMAIL OR PASSWORD.
 ${null_email_warning}  Can't be blank
 ${null_pwd_warning}  Can't be blank 
 ${Window1Title}  Get Title
+<<<<<<< HEAD
 ${path_excel}   D:\\Assessment-Portal\\WPB5_v4_FormItem.xls
 #${path_excel}   D:\\a\\1\\s\\WPB5_v4_FormItem.xls
+=======
+#${path_excel}   D:\\Assessment-Portal\\WPB5_v4_FormItem.xls
+${path_excel}   D:\\a\\1\\s\\WPB5_v4_FormItem.xls
+>>>>>>> aeca59a62a9ea0dc067153cd7c90e498a8c3b46f
 
 
 *** Test cases ***
